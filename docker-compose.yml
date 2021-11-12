@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  db:
+    build:
+      context: .
+      dockerfile: docker/db/Dockerfile
+    restart: always
+    env_file:
+      - ./.env
+    ports:
+      - "5432:5432"
+    volumes:
+      - $PWD/docker/db/data:/var/lib/postgresql/data
+  api:
+    build:
+      context: .
+      dockerfile: docker/api/Dockerfile
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+    networks:
+      - default
+    ports:
+      - "8080:8080"
