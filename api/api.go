@@ -5,7 +5,9 @@ package api
 
 import (
 	"database/sql"
+
 	"github.com/gorilla/mux"
+
 	"github.com/radish-miyazaki/go-clean-architecture/api/handler"
 	"github.com/radish-miyazaki/go-clean-architecture/interface/repository"
 	"github.com/radish-miyazaki/go-clean-architecture/usecase/diary"

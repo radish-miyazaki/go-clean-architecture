@@ -9,10 +9,12 @@ package adapter
 
 import (
 	"encoding/json"
-	"github.com/gorilla/mux"
-	"github.com/radish-miyazaki/go-clean-architecture/usecase/diary"
 	"net/http"
 	"strconv"
+
+	"github.com/gorilla/mux"
+
+	"github.com/radish-miyazaki/go-clean-architecture/usecase/diary"
 )
 
 type createDiaryRequestBody struct {

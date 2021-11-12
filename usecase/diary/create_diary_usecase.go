@@ -2,6 +2,7 @@ package diary
 
 import (
 	"context"
+
 	"github.com/radish-miyazaki/go-clean-architecture/domain/model"
 	"github.com/radish-miyazaki/go-clean-architecture/usecase/repository"
 )

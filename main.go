@@ -21,6 +21,7 @@ func main() {
 
 	// Server立ち上げ
 	srv := server.NewServer(
+		// ルーティングの読み込み
 		api.BuildRouter(conn),
 	)
 	log.Printf("Serving on localhost:%v\n", config.Config.ServerPort)
